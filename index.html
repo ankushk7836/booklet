@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="book.js" defer></script>
+</head>
+
+<body>
+  <div class="btn">
+    <span class="fas fa-bars"></span>
+  </div>
+  <!-- SideBar -->
+  <div class="sidebar">
+    <h2>COVER STYLE</h2>
+    <button>Gelow</button>
+    <button>Gelow</button>
+    <button>Gelow</button>
+    <button>Gelow</button>
+    <button>Gelow</button>
+    <button>Gelow</button>
+    <button>Gelow</button>
+    <button>Gelow</button>
+    <button>Gelow</button>
+    <button>Gelow</button>
+  </div>
+
+  <div class="page1">
+    <div class="page2">
+      <div class="image5">
+        <div class="adjust">
+          <h1>PORTFOLIO</h1>
+          <div class="menu">
+            <ul>
+              <li><a href="">ALL</a></li>
+              <li><a href="">CODING</a></li>
+              <li><a href="">DESIGN</a></li>
+              <li><a href="">LOGO</a></li>
+            </ul>
+          </div>
+          <div class="flexing">
+            <div class="addingimage"><img src="demon.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/2iF4zKrLyLIAAAAd/death-note-light.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/iropinsBBz8AAAAC/anime.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/kXqvy2m3tkcAAAAd/dr-stone-senku.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/6oOwU5DNKnMAAAAC/zragon-infinity-zoro.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/spsLPCOWPQkAAAAC/chainsaw-man-denji.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/WI5z7d934jIAAAAC/naruto-smile.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/TDSHLyUWghwAAAAd/american-psycho-tense.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/kzwbaa-Gg2QAAAAd/women-hahaha-women-memes.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/MH0ziTog4eYAAAAC/homelander-the-boys-season3.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/nSHkrRHvOUMAAAAC/mujhse-shaadi-karogi-akshay-kumar-sunny-kya-maal-hai-yaar.gif" alt=""></div>
+            <div class="addingimage"><img src="https://media.tenor.com/vI4dculj3SEAAAAC/champak-champak-smiling.gif" alt=""></div>
+
+
+          </div>
+          <div class="pop-up-image">
+            <span>&times;</span>
+            <img src="image3.jpeg" alt="">
+          </div>
+
+        </div>
+      </div>
+      <div id="left-door" class="door">
+        <div class="backsup">
+          <div class="shape image1">
+            <h1>Tokyo Ghoul</h1>
+            <!-- <p>Freelance UI/UX Designer & writer</p> -->
+          </div>
+        </div>
+        <div class="backsup2">
+          <div class="shape2 image2">
+            <h1>RESUME</h1>
+            <p class="para1">I am a <b><u>theroretical physist</u></b>developed the general theory of relativity,
+              effecting a revolution in physis.</p>
+            <h2 class="head2">EMPLOYMENT</h2>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="right-door" class="door">
+        <div class="backsup">
+          <div class="shape image4">dgdg</div>
+        </div>
+        <div class="backsup2">
+          <div class="shape2 image3">
+            <div class="adjust">
+              <h1>CONTACT</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  <script>
+    $('.btn').click(function () {
+      $(this).toggleClass("click");
+      $('.sidebar').toggleClass("show");
+    });
+
+
+    document.querySelectorAll('.addingimage img').forEach(image =>{
+      image.onclick = () =>{
+        document.querySelector('.pop-up-image').style.display = 'block';
+        document.querySelector('.pop-up-image img').src = image.getAttribute('src');
+      }
+    });
+
+    document.querySelector('.pop-up-image span').onclick = () =>{
+      document.querySelector('.pop-up-image').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
