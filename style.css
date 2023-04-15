@@ -1,1 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body{
+    background-image: url(358836.jpg);
+    background-size: 100% 100%;
+}
+
+button{
+    margin: 2px;
+    pad: 2px;
+    margin-left: 10px;
+}
+
+.sidebar h2{
+    text-align: center;
+    color: white;
+}
+
+.btn {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+
+.btn.click {
+    left: 260px;
+}
+
+.btn span {
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.btn.click span:before {
+    content: '\f00d';
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    left: -250px;
+    background: #1b1b1b;
+    transition: left 0.4s ease;
+}
+.sidebar.show{
+    left: 0px;
+  }
+
+.sidebar .active {
+    left: 0;
+}
+
+.page1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    
+}
+
+.page2{
+    width:490px;
+    height: 650px;
+    position: relative;
+    perspective: 1500px;
+}
+
+.door{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: white;
+
+}
+
+#left-door{
+    top: 0;
+    left: 0;
+    transition: transform 1.5s;
+    transform-origin: left;
+    z-index: 1;
+}
+
+
+#right-door{
+    top: 0;
+    right: 0;
+    transition: transform 0.6s;
+    transform-origin: right;
+
+}
+
+.page2:hover #left-door {
+    transform: rotateY(-180deg)
+}
+
+.page2:hover #right-door {
+    transform: rotateY(180deg)
+}
+.backsup, .backsup2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.shape, .shape2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.image1{
+    background-image: url(front.jpg);
+    background-size: 100% 100%;
+
+}
+/* .image2{
+    background-image: url(image3.jpeg);
+    background-size: 100% 100%;
+} */
+
+.image2 h1{
+    margin: auto;
+    margin-top: 30px;
+    background-color: black;
+    font-size: 2rem;
+    text-align: center;
+    width: 175px;
+    border-radius: 4px;
+
+}
+
+.image3{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image3 h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    width: 225px;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.image4{
+    background-image: url(https://1fid.com/wp-content/uploads/2022/07/girl-anime-wallaper.jpg);
+    background-size: 100% 100%;
+}
+
+.image5{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.image5 h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    width: 225px;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.adjust{
+    width: 80%;
+    height: 92%;
+    /* background-color: red; */
+    margin: auto;
+}
+
+.backsup{
+    z-index: 1;
+}
+
+.backsup2{
+    transform: rotateY(180deg);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.door{
+    transform-style: preserve-3d;
+}
+
+
+.image1 h1{
+    text-align: center;
+    font-size: 4rem;
+    line-height: 10;
+}
+
+.image1 p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.image2 .para1{
+    margin: 30px;
+    font-size: 23px;
+    color: black;
+    text-align: center;
+}
+
+/* .image2 .para2{
+    margin: 20px;
+    font-size: 25px;
+} */
+
+.image2 .head2{
+    color: black;
+    text-align: center;
+    margin: 20px;
+    border: 1px dashed grey;
+    margin: auto;
+    width: 40%;
+}
+
+.menu{
+    margin-top: 35px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li{
+    list-style: none;
+    margin: 10px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: grey;
+}
+
+.menu ul li a:hover{
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: all ease 0.3s;
+
+}
+
+.flexing{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.addingimage{
+    width: 180px;
+    height: 120px;
+    background-size: 100% 100%;
+    margin: 10px;
+    border: 5px solid white;
+   filter: drop-shadow(5px 5px 5px grey);
+   transition: .2s linear;
+   cursor: pointer;
+}
+
+.pop-up-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.pop-up-image span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+.pop-up-image img{
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.addingimage:hover{
+    transform: scale(1.1);
+}
+
+.addingimage img{
+    width: 100%;
+    height: 100%;
+}
